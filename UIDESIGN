@@ -1,0 +1,240 @@
+# AltruisticX AI — Landing Page UI Design Spec
+
+Goal
+- Convert impact-driven orgs (nonprofits, campus teams, civic orgs, edtech) into 4-week pilot inquiries.
+- Communicate trust: ethical stance, ownership of code, transparency via Live Experiment Board.
+- Lower friction: async-first model, simple booking and low-commitment flows.
+
+Tone
+- Clear, earnest, confident, human-first.
+- Avoid hype; emphasize craft, evidence, and ethics.
+
+Key UX principles
+- Lead with mission and outcome (what they get in 4 weeks).
+- Show credible social proof and shipped metrics.
+- Make the Experiment Board tangible and explorable.
+- Minimize cognitive load for booking a pilot or requesting a scoping call.
+- Mobile-first, accessible, and fast.
+
+Primary target audiences
+- Campus sustainability/facilities managers
+- EdTech program leads & teachers
+- Civic coalition program directors
+- Founders / small impact startups (1–50 ppl)
+
+Core CTAs
+- Primary: “Start a 4‑Week Pilot” (leads to short intake form + calendar)
+- Secondary: “Explore Live Experiments” (opens experiment board)
+- Tertiary: “See Shipped Work” / “Read Case Studies”
+
+Page outline (scannable order)
+1. Header (logo, nav, primary CTA)
+2. Hero — one clear value proposition (3 variations below)
+3. Proof strip: metrics + logos + short quote
+4. How it works — 3-step sprint timeline
+5. Live Experiment Board preview (interactive filters + cards)
+6. Example pilots / case studies (select 3)
+7. What we won’t do / Ethics statement (compact; trust builder)
+8. Pricing / engagement model (simple options: 1-week foundation, 4-week pilot, Pilot-to-Scale)
+9. Testimonials & partners
+10. FAQ (abridged)
+11. Footer (contact, newsletter, social, legal)
+
+Header & Nav
+- Left: AltruisticX logo (wordmark + icon).
+- Nav items: Work / Experiments / How it works / Pricing / Blog
+- Right: Primary CTA “Start a 4‑Week Pilot” (prominent), Secondary: “Explore Experiments”
+- Sticky header with subtle blur; shrink on scroll.
+
+Hero (desktop split layout)
+- Left: succinct headline (see copy options), subhead (1–2 lines), 2 CTAs horizontally (Primary and Secondary), trust badges under CTAs.
+- Right: dynamic visual:
+  - Option A: animated “experiment board” mockup showing cards changing status.
+  - Option B: stylized flow diagram: Idea → Week 1 foundations → Week 4 deliverable (repo + docs).
+  - Option C: composite screenshot carousel (energy dashboard, edtech portal, founder OS).
+- Use concise value bullets below: “4 weeks · You own the code · Ethical, explainable AI”.
+
+Hero copy variants (pick one)
+- Variant 1 — Outcome-first:
+  - Headline: “Working AI prototypes in 4 weeks — for education, energy, and civic impact.”
+  - Subhead: “Fast pilots you can own: repo, docs, and deployable demos built with transparency and ethics.”
+  - CTA primary: “Start a 4‑Week Pilot”
+  - CTA secondary: “Explore Live Experiments”
+
+- Variant 2 — Risk-minimizing:
+  - Headline: “Low‑risk AI pilots that deliver value — pause anytime, own everything.”
+  - Subhead: “Async-first sprints for impact organizations. We ship working prototypes, you keep the code.”
+  - CTAs as above
+
+- Variant 3 — Narrative & mission:
+  - Headline: “Trusted AI for social good — small teams, real results.”
+  - Subhead: “We prototype ethical, explainable AI that helps schools, campuses, and civic groups move decisions forward.”
+  - CTAs as above
+
+Proof strip
+- Horizontal strip under hero with:
+  - Logos (campus partners, civic coalitions) — grayscale, clickable to case studies
+  - Key metrics: “30 pilots run”, “12 shipped”, “uptime 99.9%”, “Avg time to demo: 4 weeks”
+  - Optional small testimonial quote toggle
+
+How it works — 3-step timeline (interactive)
+- Visual timeline cards:
+  - Week 0–1: Foundation — repo, CI/CD, staging demo
+  - Week 2–3: Build & Integrate — frontend, AI features, tests
+  - Week 4: Ship & Handoff — docs, ownership, next steps
+- Each card expands on hover/tap to show deliverables, acceptance criteria, and example outputs.
+- Include “Pause at any time” microcopy and a “what we need from you” callout (decision owner, data access).
+
+Live Experiment Board (hero feature)
+- UI concept: mini-app embedded in the landing page (preview) with link to full board.
+- Header controls:
+  - Filters: Domain (Energy, Education, Civic), Status (Now Shipping, Looking for Partners, Shelved), Tech tags (NLP, Time-series, Computer Vision, Dashboards)
+  - Sort: Last updated, Status, Popularity
+  - Search box
+- Card layout:
+  - Card shows: title, one-line hypothesis, status badge (color-coded: green shipping, blue seeking partners, gray shelved), small metrics (e.g., users, sites), CTA: “View details”
+  - Expanded detail (modal or side-panel): problem statement, outcome to date, repo link (for shipped), short deploy demo GIF (if shipped), ethics notes (why we paused or accepted).
+- Interaction: Live badges update (animate) on load to underscore “live”.
+
+Example pilots / case studies
+- Use 3 feature cards (Energy, Education, Founder OS).
+- Each card includes:
+  - Problem → hypothesis → result bullets (metrics where possible)
+  - “What we delivered” (list)
+  - “You can have this in 4 weeks” microCTA
+- Link to full case study pages.
+
+What we won’t build / Ethical boundary
+- Compact two-column block:
+  - Left: Principles (Explainability, No black‑box for public-serving systems, No political surveillance)
+  - Right: “Not a fit” quick list (large enterprise procurement cycles, political monitoring products, product wishlists without user problem)
+- Design: use neutral backgrounds and icons to show stance without moralizing.
+
+Pricing / Engagement model (transparent & simple)
+- Cards for 3 options:
+  - 1‑Week Foundation (proof-of-setup, repo + staging) — entry-level
+  - 4‑Week Pilot (full prototype, docs, handoff) — recommended
+  - Pilot → Scale (estimate & engagement plan after pilot)
+- Each card lists deliverables and next steps.
+- CTA on each card: “Start this” or “Request pricing”
+- If pricing is customized, offer “Book a 15-minute intake” with calendar widget.
+
+Testimonials & partners
+- Rotating quotes with headshots, role, org
+- Logos carousel (auto-scroll, accessible)
+
+FAQ — 6 top questions
+- Short Q/A: ownership, data handling, timelines, ethics, how to partner on a shelved project, cancellation policy.
+
+Footer
+- Links: Contact / Book a pilot / Docs / Experiment Board / Privacy / Code of Conduct
+- Small sign-up: newsletter for experiments updates
+- Accessibility link, language toggle if needed
+
+Visual style
+- Palette (example):
+  - Primary: Deep teal #0F6B61 (trust & calm)
+  - Accent: Warm amber #F6A935 (actions, highlights)
+  - Neutral bg: Off-white #FAFBFB
+  - Surface: Light slate #F3F6F7
+  - Text: Charcoal #121217
+  - Statuses: Green #2DBE6B (shipping), Blue #2B7BE3 (partner), Gray #9AA0A6 (shelved)
+- Typography:
+  - Headline: Inter or Poppins, semi-bold 700
+  - Body: Inter or Roboto, 400
+  - Code / mono: JetBrains Mono for repo snippets
+- Imagery:
+  - Use real screenshots of shipped work for credibility.
+  - Illustrations: simple line-illustrations depicting “labs”, “notebook”, “campus”, “teacher”.
+- Iconography:
+  - Single-style line icons with filled badges for statuses.
+
+Accessibility
+- Contrast: all text meet AA (prefer AAA for hero)
+- Keyboard navigation for experiment board
+- ARIA roles for dialog, filters, and cards
+- Alt text for images/screenshots
+- Focus-visible styles for actionable elements
+- Use prefers-reduced-motion for animated mockups
+
+Microinteractions
+- Button hover: elevate + subtle amber glow for primary CTA
+- Status badge updates: gentle pulse when “Now Shipping”
+- Filter chips: toggle animation, count badges
+- Card expansion: slide-in panel from right for details
+
+Experiment Board details (data & UX)
+- Schema for card data:
+  - id, title, hypothesis, status, domain, tags, updated_at, metrics, demo_url, repo_url, ethics_note
+- Default view shows newest “Now Shipping” at top
+- Ability to “subscribe” to an experiment updates (email) — collect consent
+- Provide public repo link for shipped items (or sanitized public snapshot)
+
+Conversion flows
+- Primary flow: CTA → 3-field triage form (Org name, Problem in 1 sentence, Contact email) → calendar widget or “Request intake” → confirmation email with next steps and optional pre-intake form.
+- Lightweight alternative: CTA opens modal with “Is this a fit?” checklist (domain, decision maker, data access) with inline scheduling.
+
+SEO & content strategy
+- Title & H1 alignment: “AltruisticX AI — 4‑week AI pilots for education, energy, and civic impact”
+- Use structured data (Organization, Service, CaseStudy)
+- Dedicated pages for top experiments (good for long-tail SEO)
+- Blog/notes: rapid posts about experiments and learnings (transparency builds trust)
+
+Analytics & experimentation
+- Track events: CTA clicks, experiment-card views, filter usage, form starts, form completions.
+- Setup A/B tests:
+  - Hero copy variant A vs B
+  - Experiment Board preview vs static image
+  - Primary CTA copy: “Start a 4‑Week Pilot” vs “Book a 15‑min Intake”
+- Monitor conversion by domain (education vs energy etc.)
+
+Performance & delivery notes
+- Defer heavy experiment board data load; load initial preview as JSON snapshot, fetch details on demand.
+- Use optimized screenshots, WebP, and placeholder LQIP.
+- Server-side render hero content for SEO.
+- Preconnect to calendar and analytics providers.
+
+Developer handoff / design deliverables
+- Figma file with pages:
+  - 1: Landing Desktop (desktop widths 1440, 1200)
+  - 2: Landing Tablet (768)
+  - 3: Landing Mobile (375)
+  - 4: Component library (buttons, cards, filters, badges)
+  - 5: Experiment Board components (card, expanded panel, filters)
+- Tokens: color tokens, spacing scale, typography tokens
+- Export: PNG/JPEG assets for screenshots, SVG icons
+- Copy sheet (CSV) with all microcopy and alt text
+- Accessibility checklist and QA steps
+
+Acceptance criteria (for QA)
+- Primary CTA visible within first viewport on desktop and mobile.
+- Experiment Board preview loads within 1s on 3G simulated network (use skeleton).
+- All text meets contrast requirements and is keyboard-navigable.
+- Form submission triggers calendar flow and confirmation email.
+- Case study pages load and include repo links for shipped work.
+
+Implementation timeline (recommended)
+- Week 0: Discovery & copy finalization
+- Week 1: Visual design & Figma components
+- Week 2: Frontend build (static landing + experiment preview)
+- Week 3: Integrate forms/calendar + analytics
+- Week 4: QA, accessibility audit, launch + monitor
+
+Sample microcopy snippets
+- Primary CTA: “Start a 4‑Week Pilot”
+- Secondary CTA: “Explore Live Experiments”
+- Experiment board CTA: “View details · Subscribe”
+- Trust: “You own the code, the repo, and the next steps.”
+- Ethics badge: “Explainable by design — we publish experiment notes.”
+
+Handoff checklist (short)
+- Figma link + component library
+- Copy CSV + screenshots
+- JSON schema for experiments
+- Calendar & email templates
+- Analytics events map
+- Accessibility checklist
+
+What's next
+- A hero variant and the data to surface in the Live Experiment preview (which 3 experiments to show).
+- Convert this into a Figma page or produce HTML/CSS components (Tailwind/React) — tell me which you'd prefer first.

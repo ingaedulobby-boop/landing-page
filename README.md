@@ -1,88 +1,40 @@
-# landing-page
+```markdown
+# AltruisticX AI — Prototype: Hero + Live Experiment Board
 
-A documentation site for my work, ideas, and landing page.
+What I built
+- A self-contained HTML prototype demonstrating:
+  - Hero section with headline, subhead, primary and secondary CTAs
+  - Live Experiment Board preview: horizontally scrollable cards grouped by status
+  - Card hover interaction that flips to show a one-line hypothesis and key metrics
+  - Lightweight accessibility considerations (aria labels, keyboard-focusable cards)
+  - Uses Tailwind Play CDN for quick viewing and iteration
 
-## Overview
+Why this file
+- Fast way to validate layout, copy, and interaction rhythm before investing in a full Figma design or a larger frontend build.
 
-This is a simple, professional landing page and documentation site that showcases work projects and ideas. Built with clean HTML and CSS, it's easy to customize and deploy.
+Files included
+- index.html — interactive prototype (Tailwind CDN + tiny JS)
 
-## Features
+How to view
+1. Save `index.html` to your computer.
+2. Open in a modern browser (Chrome, Firefox, Safari).
+3. No build step required — Tailwind CDN is used so it works instantly.
 
-- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
-- **Work Section**: Showcase your projects and accomplishments
-- **Ideas Section**: Document and share your innovative ideas
-- **Contact Section**: Make it easy for people to get in touch
-- **Clean Navigation**: Easy-to-use navigation with smooth scrolling
+What I need from you to proceed
+- Choose deliverable:
+  - Option A: Full-page Figma-style mock (visual design + components)
+  - Option B: UI kit (Figma components, tokens, copy sheet)
+  - Option C: Full coded prototype (React + Tailwind, multi-section, accessible)
+- If Option A/B/C, provide (if available):
+  - Logo SVG
+  - Brand hex colors and preferred fonts (or I’ll use the suggested palette)
+  - 2–4 experiments you want surfaced in the Live Board preview (title, one-sentence hypothesis, status, a metric or two)
+  - Any preferred analytics, form, or calendar provider (e.g., Calendly, SavvyCal)
 
-## Getting Started
+Next I will
+- If you pick Figma: produce a Figma-ready wireframe export (SVGs + PNGs + component spec) or a Figma file (I’ll prepare downloadable assets that are Figma-ready).
+- If you pick Coded prototype: scaffold a React + Tailwind project with the rest of the landing sections (timeline, case-study cards, pricing).
+- If you pick UI kit: generate tokens, components, and a copy CSV for handoff.
 
-### Local Development
-
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/ingaedulobby-boop/landing-page.git
-   cd landing-page
-   ```
-
-2. Open `index.html` in your web browser:
-   ```bash
-   # On macOS
-   open index.html
-   
-   # On Linux
-   xdg-open index.html
-   
-   # On Windows
-   start index.html
-   ```
-
-3. You can also use a simple HTTP server:
-   ```bash
-   # Using Python 3
-   python -m http.server 8000
-   
-   # Using Node.js (if you have http-server installed)
-   npx http-server
-   ```
-
-### Customization
-
-1. Edit `index.html` to update content:
-   - Update the hero section with your personal information
-   - Add your projects in the Work section
-   - Share your ideas in the Ideas section
-   - Update contact information
-
-2. Modify `styles.css` to customize the appearance:
-   - Change colors in the CSS variables
-   - Adjust spacing and layout
-   - Add your own branding
-
-## Deployment
-
-This site can be deployed to various hosting platforms:
-
-### GitHub Pages
-1. Go to your repository Settings
-2. Navigate to Pages section
-3. Select the main branch as source
-4. Your site will be available at `https://yourusername.github.io/landing-page`
-
-### Other Options
-- Netlify
-- Vercel
-- AWS S3
-- Any static site hosting service
-
-## File Structure
-
+I’m ready to continue — tell me which option you want and share any brand assets or 3 eksperiments to show in the board.
 ```
-landing-page/
-├── index.html      # Main HTML file
-├── styles.css      # Stylesheet
-└── README.md       # This file
-```
-
-## License
-
-This project is open source and available for personal and commercial use.

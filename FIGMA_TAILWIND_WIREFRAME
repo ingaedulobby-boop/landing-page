@@ -1,0 +1,417 @@
+# AltruisticX AI — Figma-ready Wireframe + UI Kit + Tailwind Landing
+
+---
+
+This document contains everything you asked for in one place:
+
+1. **Figma-ready wireframe spec** (frames, layout, spacing, component names) — ready to copy into Figma.
+2. **UI components** with states and usage notes.
+3. **Color palette** and typography tokens.
+4. **Hero section layout** design and interaction notes.
+5. **Complete Tailwind + HTML landing page structure** (production-ready markup + Tailwind token suggestions and a sample Tailwind config snippet).
+
+---
+
+# 1) Wireframe Overview (Figma-ready)
+
+## Canvas structure (frames / pages)
+
+* Page 1 — **Landing / Desktop** (1440px width frame)
+* Page 2 — **Landing / Mobile** (375px width frame)
+* Page 3 — **Component Library** (Buttons, Cards, Experiment Cards, Nav, Footer)
+* Page 4 — **Prototype Flow** (hero interaction → experiment board → pilot flow)
+
+## Grid & Spacing
+
+* Desktop frame: 12-column grid, 24px gutter, 72px outer margins.
+* Container widths: max-width 1200px centered.
+* Baseline grid: 8px.
+* Vertical rhythm: multiply spacing in 8px increments.
+
+## Frames (top-to-bottom)
+
+1. **Top Nav** — height 64px; elements: logo (left), nav links, CTA button (Start a Pilot) (right).
+2. **Hero** — split layout: left text column (6 cols), right live experiment feed (6 cols). Vertical padding 96px top & bottom.
+3. **Experiment Board** — horizontal scrollable kanban with columns: Now Shipping / In Experiment / Looking for Partners / Shelved. Cards are 320px wide, 16px gap.
+4. **4-Week Roadmap** — timeline component with 3 vertical step cards.
+5. **Case Studies / Autopsies** — 3-column masonry cards with concise diagnostic format.
+6. **Who This Is For** — 3 panels with icons.
+7. **Creds / Metrics** — small row of 4 metric chips (Uptime, Sites, Pilots, Partners).
+8. **CTA / Start Pilot** — compact card with 2-3 quick fields + CTA.
+9. **Footer** — 3-column footer + tiny lab coordinate line.
+
+---
+
+# 2) UI Component Library (names + variants)
+
+All components should be named and organized for easy export to a Figma library.
+
+## Buttons
+
+* `btn/primary` — filled, rounded-md, shadow-sm, height 44px, padding 20px; uses `primary` color.
+* `btn/secondary` — outline, rounded-md, height 44px.
+* `btn/ghost` — text only.
+* Variants: `loading` (spinner replace text), `disabled`.
+
+## Nav
+
+* `nav/top` — logo, links, dropdown support, CTA button.
+* Mobile: hamburger → slide-over menu.
+
+## Hero components
+
+* `hero/headline` — large H1 (72px desktop, 40px mobile), line-height 1.02.
+* `hero/sub` — 18–20px supporting copy.
+* `hero/experiment-feed` — a vertical stack of `experiment-card` with status pills and flip on hover.
+
+## Cards
+
+* `card/experiment` — 320 × auto, subtle border-radius 12px, shadow.
+
+  * Fields: title, sector tag, hypothesis (1-line), status pill, small metrics row, tiny ethical-note tag.
+* `card/case-study` — wide, contains short diagnostic bullets and 2 small screenshots.
+* `card/metric` — small rounded chip with number + label.
+
+## Timeline / Roadmap
+
+* `timeline/step` — circular step number + vertical connecting line + content panel.
+
+## Forms
+
+* `form/input` — height 44px, rounded, light neutral background.
+* `form/select` — same height, caret icon.
+* `form/textarea` — resizable off, 120–160px height default.
+
+---
+
+# 3) Color Palette & Typography
+
+## Palette (tokens)
+
+* `--ink-900`: #0C0F14 (Deep Ink - primary background / primary text)
+* `--charcoal-800`: #111315 (Charcoal - headings)
+* `--ethics-green`: #6CE0C3 (Accent success / ethical tag)
+* `--climate-blue`: #58A4FF (Accent primary)
+* `--sand-100`: #F4F0EC (Warm neutral background)
+* `--accent-warm`: #FFC857 (Optional contrasting accent for CTAs)
+* `--muted-400`: #9AA3A8 (Muted text)
+
+### Tailwind color map suggestion (tailwind.config)
+
+```js
+// snippet included later in the document (Tailwind config)
+```
+
+## Typography
+
+* Headline: Inter / Inter Tight (700/800). Sizes: H1 72/56/40 (desktop/tablet/mobile)
+* Subhead: Inter 18–20px
+* Body: Inter 16px, 1.5 line-height
+* Mono accent (code/metrics): JetBrains Mono 14px
+
+---
+
+# 4) Hero Section — Figma Blueprint
+
+## Layout
+
+* Left column (6/12): H1, supporting paragraph, CTA row (primary + ghost), trust logos or micro-metrics row.
+* Right column (6/12): Live Experiment Feed (vertical stack) inside a soft card with subtle animation.
+
+## Live Experiment Feed behaviour
+
+* Each experiment card shows:
+
+  * small sector chip (Energy / Education / Civic)
+  * short title (1 line)
+  * 1-line hypothesis in muted text
+  * status pill (Now Shipping / In Experiment / Looking for Partners / Shelved)
+* Interaction: hover card → flip to reveal one-line "what we learned" and a "view details" link.
+* On click: open a modal that shows experiment details and a small timeline (discovery → prototype → shipped/shelved).
+
+## Micro-interactions to design in Figma
+
+* Status pill color transitions.
+* Card flip (subtle 3D rotate Y) for hover states.
+* Live pulse dot for "Now Shipping" items.
+
+---
+
+# 5) HTML + Tailwind Landing Page (full structure)
+
+> The code below is a complete landing-page scaffold. It's written as clean, semantic HTML with Tailwind utility classes. Replace placeholder content with your real copy and images. I also include a minimal `tailwind.config.js` snippet to map the palette.
+
+```html
+<!-- index.html (Tailwind-based) -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AltruisticX AI — Live AI Lab for Impact</title>
+  <meta name="description" content="Rapid 4-week AI pilots for energy, education, and civic impact. Ethical, transparent, and you own the code.">
+  <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body class="bg-sand-100 text-ink-900 font-sans">
+
+  <!-- NAV -->
+  <header class="bg-white shadow-sm">
+    <div class="container mx-auto max-w-6xl px-6 flex items-center justify-between h-16">
+      <div class="flex items-center gap-4">
+        <div class="text-xl font-bold">AltruisticX<span class="text-climate-blue">AI</span></div>
+        <nav class="hidden md:flex gap-6 text-sm text-muted">
+          <a href="#experiments">Experiments</a>
+          <a href="#process">Process</a>
+          <a href="#case-studies">Case Studies</a>
+        </nav>
+      </div>
+      <div class="flex items-center gap-4">
+        <a class="btn-ghost text-sm hidden md:inline">Lab Notebook</a>
+        <a href="#start" class="btn-primary">Start a 4-week Pilot</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="container mx-auto max-w-6xl px-6 py-24 grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+      <!-- Left text -->
+      <div class="md:col-span-6">
+        <h1 class="text-5xl md:text-6xl leading-tight font-extrabold mb-6">Build an ethical AI pilot in four weeks — for energy, education, and civic tech.</h1>
+        <p class="text-lg text-muted mb-6 max-w-xl">A Live AI Lab that ships working prototypes fast. Week-by-week sprints, async-first communication, and code you own.</p>
+        <div class="flex gap-4 items-center">
+          <a href="#start" class="btn-primary">Start a 4-Week Pilot</a>
+          <a href="#experiments" class="btn-ghost">See the Lab Notebook</a>
+        </div>
+        <div class="mt-8 flex gap-6 text-sm text-muted">
+          <div class="flex flex-col">
+            <span class="font-mono text-lg">24</span>
+            <span>Active Pilots</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-mono text-lg">99.9%</span>
+            <span>Uptime</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right live experiment feed -->
+      <div class="md:col-span-6">
+        <div class="bg-white rounded-2xl p-6 shadow-md">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-lg font-semibold">Live Experiment Board</h3>
+            <a href="#experiments" class="text-sm text-climate-blue">Open Lab Notebook</a>
+          </div>
+          <div class="space-y-4">
+            <!-- Example experiment card -->
+            <article class="experiment-card p-4 rounded-lg border">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-sm font-semibold">Campus Energy Storyboard</span>
+                <span class="px-2 py-1 text-xs rounded-full bg-ethics-green/10 text-ethics-green">Now Shipping</span>
+              </div>
+              <p class="text-sm text-muted">Hypothesis: energy data as narrative helps facilities win grant funding.</p>
+            </article>
+
+            <article class="experiment-card p-4 rounded-lg border">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-sm font-semibold">Capstone Partner Matchmaker</span>
+                <span class="px-2 py-1 text-xs rounded-full bg-climate-blue/10 text-climate-blue">Looking for Partners</span>
+              </div>
+              <p class="text-sm text-muted">Hypothesis: match students & partners faster by modeling affinity & capacity.</p>
+            </article>
+
+            <article class="experiment-card p-4 rounded-lg border">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-sm font-semibold">Founder OS Dashboard</span>
+                <span class="px-2 py-1 text-xs rounded-full bg-muted-400/10 text-muted-400">Shipped</span>
+              </div>
+              <p class="text-sm text-muted">Internal dashboard consolidating product & ops signals for a B2B startup.</p>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experiment Board (full) -->
+    <section id="experiments" class="container mx-auto max-w-6xl px-6 pb-20">
+      <h2 class="text-2xl font-semibold mb-6">Live Experiment Board</h2>
+      <div class="flex gap-6 overflow-x-auto pb-6">
+        <!-- Column: Now Shipping -->
+        <div class="w-80 shrink-0">
+          <h4 class="font-semibold mb-3">Now Shipping</h4>
+          <div class="space-y-4">
+            <!-- replicate cards -->
+            <div class="bg-white rounded-lg p-4 shadow-sm border">
+              <div class="flex justify-between items-start mb-2">
+                <div class="text-sm font-semibold">Campus Energy Storyboard</div>
+                <div class="text-xs font-mono">Uptime 99.9%</div>
+              </div>
+              <p class="text-sm text-muted">Making energy data tell a campus narrative.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column: In Experiment -->
+        <div class="w-80 shrink-0">
+          <h4 class="font-semibold mb-3">In Experiment</h4>
+          <div class="space-y-4">
+            <div class="bg-white rounded-lg p-4 shadow-sm border">
+              <div class="flex justify-between items-start mb-2">
+                <div class="text-sm font-semibold">EdTech Pilot Portal</div>
+                <div class="text-xs">6 weeks</div>
+              </div>
+              <p class="text-sm text-muted">Teacher-facing portal to reduce admin friction.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column: Looking for Partners -->
+        <div class="w-80 shrink-0">
+          <h4 class="font-semibold mb-3">Looking for Partners</h4>
+          <div class="space-y-4">
+            <div class="bg-white rounded-lg p-4 shadow-sm border">
+              <div class="flex justify-between items-start mb-2">
+                <div class="text-sm font-semibold">Capstone Partner Matchmaker</div>
+                <div class="text-xs">Pilot</div>
+              </div>
+              <p class="text-sm text-muted">Matchmaking for capstone projects.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column: Shelved -->
+        <div class="w-80 shrink-0">
+          <h4 class="font-semibold mb-3">Shelved</h4>
+          <div class="space-y-4">
+            <div class="bg-white rounded-lg p-4 shadow-sm border">
+              <div class="flex justify-between items-start mb-2">
+                <div class="text-sm font-semibold">AI Meeting Summarizer</div>
+                <div class="text-xs">Paused</div>
+              </div>
+              <p class="text-sm text-muted">Paused due to political & edge-case concerns.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section id="process" class="container mx-auto max-w-6xl px-6 pb-24">
+      <h2 class="text-2xl font-semibold mb-6">4-Week Pilot — Week by Week</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-sm border">
+          <div class="text-sm font-mono mb-2">Week 1 — Foundation</div>
+          <ul class="text-sm text-muted list-disc pl-5">
+            <li>Repo + CI/CD</li>
+            <li>DB & API skeleton</li>
+            <li>First MVP feature</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow-sm border">
+          <div class="text-sm font-mono mb-2">Week 2 — Polish</div>
+          <ul class="text-sm text-muted list-disc pl-5">
+            <li>Frontend integration</li>
+            <li>AI model integration</li>
+            <li>Documentation</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow-sm border">
+          <div class="text-sm font-mono mb-2">Ship or Stop</div>
+          <p class="text-sm text-muted">Ship & scale or stop after week 1. You own the code.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="start" class="container mx-auto max-w-6xl px-6 pb-32">
+      <div class="bg-white rounded-2xl p-8 shadow-md flex flex-col md:flex-row justify-between items-center gap-6">
+        <div>
+          <h3 class="text-xl font-semibold">Ready to pilot?</h3>
+          <p class="text-sm text-muted">Start a 4-week pilot — quick intake, async-first, and transparent.</p>
+        </div>
+        <form class="w-full md:w-auto flex gap-3">
+          <input class="form-input rounded-md px-3 py-2" placeholder="Your org / project" aria-label="project name">
+          <button class="btn-primary">Start Pilot</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t">
+    <div class="container mx-auto max-w-6xl px-6 py-12 grid md:grid-cols-3 gap-6">
+      <div>
+        <div class="font-bold text-lg">AltruisticX AI</div>
+        <p class="text-sm text-muted max-w-sm">Ethical, rapid AI pilots for energy, education, and civic tech. We ship working prototypes fast — and you own the code.</p>
+      </div>
+      <div class="text-sm">
+        <div class="font-semibold mb-2">Explore</div>
+        <ul class="space-y-2 text-muted">
+          <li><a href="#experiments">Lab Notebook</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#case-studies">Case Studies</a></li>
+        </ul>
+      </div>
+      <div class="text-sm">
+        <div class="font-semibold mb-2">Regions</div>
+        <div class="text-muted">PA • DC • Boston • Maine</div>
+      </div>
+    </div>
+    <div class="text-center text-xs text-muted py-4">LAT 39.9526 • LONG -75.1652 • Local labs in PA / DC / MA / ME</div>
+  </footer>
+
+</body>
+</html>
+```
+
+---
+
+## Tailwind configuration snippet
+
+```js
+// tailwind.config.js
+module.exports = {
+  content: ["./**/*.html"],
+  theme: {
+    extend: {
+      colors: {
+        'ink-900': '#0C0F14',
+        'charcoal-800': '#111315',
+        'ethics-green': '#6CE0C3',
+        'climate-blue': '#58A4FF',
+        'sand-100': '#F4F0EC',
+        'accent-warm': '#FFC857',
+        'muted-400': '#9AA3A8'
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'Segoe UI', 'Roboto'],
+        mono: ['JetBrains Mono', 'monospace']
+      }
+    }
+  }
+}
+```
+
+---
+
+# 6) Figma Handoff Notes
+
+* Export component variants as separate frames: e.g., `Button/Primary/Default`, `Button/Primary/Hover`, etc.
+* Use auto-layout for cards and buttons.
+* Create color styles for each token; create text styles for H1/H2/h3/body/mono.
+* Prepare a small prototype for hero interaction: card hover flip and modal reveal.
+
+---
+
+# 7) Next steps & optional extras I can generate
+
+* I can export a **Figma-ready JSON** (design tokens + component list) for import into Figma plugins.
+* I can produce a **full static HTML export** with build scripts (PostCSS + Tailwind) and optimized images.
+* I can make a **high-fidelity Figma mock** for the hero section with interactions.
+
+---
+
+*End of document.*
